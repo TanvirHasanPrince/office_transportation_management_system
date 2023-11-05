@@ -10,6 +10,6 @@ router.get('/', AdminController.getAllAdmins);
 router.delete('/:id', AdminController.deleteAdmin);
 
 router.post('/create-admin', validateRequest(AdminValidation.createAdminZodSchema), AdminController.createAdmin);
-router.patch('/:id', AdminController.updateAdmin);
+router.patch('/:id',validateRequest(AdminValidation.updateAdminZodSchema), AdminController.updateAdmin);
 
 export const AdminRoute = router;
