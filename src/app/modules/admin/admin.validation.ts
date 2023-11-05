@@ -11,6 +11,9 @@ const createAdminZodSchema = z.object({
         required_error: 'Last name is required',
       }),
     }),
+    role: z.string({
+      required_error: 'Role is required',
+    }),
     password: z.string({
       required_error: 'Password is required',
     }),
@@ -32,6 +35,7 @@ const updateAdminZodSchema = z.object({
         lastName: z.string({}).optional(),
       })
       .optional(),
+    role: z.string({}).optional(),
     password: z.string({}).optional(),
     phoneNumber: z.string({}).optional(),
     address: z.string({}).optional(),

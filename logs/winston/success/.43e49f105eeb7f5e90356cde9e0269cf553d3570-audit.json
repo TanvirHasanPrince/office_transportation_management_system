@@ -29,6 +29,11 @@
             "date": 1699214509894,
             "name": "D:\\My Projects\\Office Transportation Management System\\office_transportation_management_system_backend\\logs\\winston\\success\\GM-2023-11-06-02-success.log",
             "hash": "1ff95fc67d08facb976dcbaa707896000bb437f2abf147ef44354fa63fd41c3a"
+        },
+        {
+            "date": 1699218022741,
+            "name": "D:\\My Projects\\Office Transportation Management System\\office_transportation_management_system_backend\\logs\\winston\\success\\GM-2023-11-06-03-success.log",
+            "hash": "831a026482e82d9aa39e48a0ca53fbc40127650f7894eb12f5655f66d8c0ff05"
         }
     ],
     "hashType": "sha256"

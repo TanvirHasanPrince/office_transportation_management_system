@@ -1,9 +1,7 @@
-export const adminFilterableFields = [
-  'searchTerm',
-];
+export const adminFilterableFields = ['searchTerm', 'phoneNumber'];
 
 export const adminSearchableFields = [
-  'contactNo',
+  'phoneNumber',
   'name.firstName',
   'name.lastName',
   'name.middleName',

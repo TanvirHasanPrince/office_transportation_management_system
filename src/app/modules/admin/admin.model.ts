@@ -1,5 +1,5 @@
 import { Schema, model } from 'mongoose';
-import { AdminModel, IAdmin } from './admin.interface';
+import { AdminModel, IAdmin, UserRole } from './admin.interface';
 import config from '../../../config';
 import bcrypt from 'bcrypt';
 
@@ -23,6 +23,7 @@ const AdminSchema = new Schema<IAdmin, AdminModel>(
       },
       required: true,
     },
+    role: { type: String, enum: Object.values(UserRole), required: true},
     password: {
       type: String,
       required: true,
