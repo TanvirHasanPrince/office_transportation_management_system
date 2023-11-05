@@ -1,6 +1,6 @@
 import { Model } from 'mongoose';
-import { UserRole } from '../admin/admin.interface';
 
+import { UserRole } from '../admin/admin.interface';
 
 export type UserName = {
   firstName: string;
@@ -22,4 +22,3 @@ export type EmployeeModel = Model<IEmployee, Record<string, unknown>>;
 export type IEmployeeFilters = {
   searchTerm?: string;
 };
-
