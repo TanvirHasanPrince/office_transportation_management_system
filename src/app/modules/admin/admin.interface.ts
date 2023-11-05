@@ -8,6 +8,7 @@ export type UserName = {
 
 export type IAdmin = {
   id: string;
+  password: string;
   name: UserName;
   phoneNumber: string;
   address: string;
