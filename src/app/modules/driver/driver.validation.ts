@@ -44,6 +44,28 @@ const createDriverZodSchema = z.object({
   }),
 });
 
+
+const updateDriverZodSchema = z.object({
+  body: z.object({
+    name: NameSchema.optional(),
+    role: z.enum(['employee', 'admin', 'driver']).optional(),
+    password: z.string().min(6).optional(),
+    phoneNumber: z
+      .string({
+        required_error: 'Phone Number required',
+      })
+      .optional(),
+    address: z
+      .string({
+        required_error: 'Address is required',
+      })
+      .optional(),
+    vehicle: VehicleSchema.optional(),
+  }),
+});
+
+
 export const DriverValidation = {
   createDriverZodSchema,
+  updateDriverZodSchema,
 };
