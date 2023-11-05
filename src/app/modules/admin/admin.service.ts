@@ -79,8 +79,38 @@ const getSingleAdmin = async (id: string): Promise<IAdmin | null> => {
   return result;
 };
 
+
+const updateAdmin = async (
+  id: string,
+  payload: Partial<IAdmin>,
+): Promise<IAdmin | null> => {
+  const isExist = await Admin.findById(id);
+
+  if (!isExist) {
+    throw new ApiError(httpStatus.NOT_FOUND, 'Admin not found !');
+  }
+
+  const { name, ...userData } = payload;
+  const updatedUserData: Partial<IAdmin> = { ...userData };
+
+  //dynamically handling
+  if (name && Object.keys(name).length > 0) {
+    Object.keys(name).forEach(key => {
+      const nameKey = `name.${key}` as keyof Partial<IAdmin>; // `name.fisrtName`
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      (updatedUserData as any)[nameKey] = name[key as keyof typeof name];
+    });
+  }
+
+  const result = await Admin.findByIdAndUpdate(id, updatedUserData, {
+    new: true,
+  });
+  return result;
+};
+
 export const AdminService = {
   createAdmin,
   getAllAdmins,
   getSingleAdmin,
+  updateAdmin,
 };
