@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "D:\\My Projects\\Office Transportation Management System\\office_transportation_management_system_backend\\logs\\winston\\success\\.43e49f105eeb7f5e90356cde9e0269cf553d3570-audit.json",
+    "files": [
+        {
+            "date": 1699142811256,
+            "name": "D:\\My Projects\\Office Transportation Management System\\office_transportation_management_system_backend\\logs\\winston\\success\\GM-2023-11-05-06-success.log",
+            "hash": "be62853dd652f0309f7e3b6c7bfa05b3448bdbdf1370721c2db879b41f71978b"
+        }
+    ],
+    "hashType": "sha256"
+}

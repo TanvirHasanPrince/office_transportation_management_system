@@ -5,6 +5,7 @@ import httpStatus from 'http-status';
 import express, { Application, NextFunction, Request, Response } from 'express';
 const app: Application = express();
 import cors from 'cors';
+import globalErrorHandler from './app/middlewares/globalErrorHandler';
 
 //Using cors
 app.use(cors());
@@ -32,5 +33,8 @@ app.use((req: Request, res: Response, next: NextFunction) => {
   });
   next();
 });
+
+
+app.use(globalErrorHandler);
 
 export default app;
