@@ -2,6 +2,7 @@ import express from 'express';
 import { AdminRoute } from '../modules/admin/admin.routes';
 import { EmployeeRoute } from '../modules/employee/employee.routes';
 import { DriverRoute } from '../modules/driver/driver.routes';
+import { LocationRoute } from '../modules/location/location.routes';
 
 
 const router = express.Router();
@@ -18,6 +19,10 @@ const moduleRoutes = [
   {
     path: '/driver',
     route: DriverRoute,
+  },
+  {
+    path: '/location',
+    route: LocationRoute,
   },
 ];
 
