@@ -3,6 +3,7 @@ import { AdminRoute } from '../modules/admin/admin.routes';
 import { EmployeeRoute } from '../modules/employee/employee.routes';
 import { DriverRoute } from '../modules/driver/driver.routes';
 import { LocationRoute } from '../modules/location/location.routes';
+import { ScheduleRoute } from '../modules/schedule/schedule.routes';
 
 
 const router = express.Router();
@@ -23,6 +24,10 @@ const moduleRoutes = [
   {
     path: '/location',
     route: LocationRoute,
+  },
+  {
+    path: '/schedule',
+    route: ScheduleRoute,
   },
 ];
 
