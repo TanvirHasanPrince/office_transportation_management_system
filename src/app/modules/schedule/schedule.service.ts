@@ -20,6 +20,7 @@ const createSchedule = async (schedule: ISchedule): Promise<ISchedule> => {
     throw new ApiError(httpStatus.BAD_REQUEST, 'Failed to find driver');
   }
 
+  // Check if the location exists in the database
   const existingLocation = await Location.findById(location);
 
   if (!existingLocation) {
