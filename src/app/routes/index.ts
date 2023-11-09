@@ -6,7 +6,6 @@ import { LocationRoute } from '../modules/location/location.routes';
 import { ScheduleRoute } from '../modules/schedule/schedule.routes';
 import { authRoutes } from '../modules/auth/auth.routes';
 
-
 const router = express.Router();
 
 const moduleRoutes = [
