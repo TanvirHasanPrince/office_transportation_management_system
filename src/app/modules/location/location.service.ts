@@ -78,6 +78,27 @@ const getSingleLocation = async (id: string): Promise<ILocation | null> => {
   return result;
 };
 
+const updateLocation = async (
+  id: string,
+  payload: Partial<ILocation>,
+): Promise<ILocation | null> => {
+  const isExist = await Location.findById(id);
+
+  if (!isExist) {
+    throw new ApiError(httpStatus.NOT_FOUND, 'Location not found !');
+  }
+
+  const { ...locationData } = payload;
+  const updatedUserData: Partial<ILocation> = { ...locationData };
+
+
+
+  const result = await Location.findByIdAndUpdate(id, updatedUserData, {
+    new: true,
+  });
+  return result;
+};
+
 const deleteLocation = async (id: string): Promise<ILocation | null> => {
   const result = await Location.findByIdAndDelete(id);
   return result;
@@ -88,4 +109,5 @@ export const LocationService = {
   getAllLocations,
   getSingleLocation,
   deleteLocation,
+  updateLocation,
 };

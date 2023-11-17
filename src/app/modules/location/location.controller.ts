@@ -49,6 +49,19 @@ const getSingleLocation = catchAsync(async (req: Request, res: Response) => {
   });
 });
 
+const updateLocation = catchAsync(async (req: Request, res: Response) => {
+  const id = req.params.id;
+  const updatedData = req.body;
+  const result = await LocationService.updateLocation(id, updatedData);
+
+  sendResponse<ILocation>(res, {
+    statusCode: httpStatus.OK,
+    success: true,
+    message: 'Location updated successfully',
+    data: result,
+  });
+});
+
 const deleteLocation = catchAsync(async (req: Request, res: Response) => {
   const id = req.params.id;
 
@@ -67,5 +80,6 @@ export const LocationController = {
   getAllLocations,
   getSingleLocation,
   deleteLocation,
+  updateLocation,
 };
 

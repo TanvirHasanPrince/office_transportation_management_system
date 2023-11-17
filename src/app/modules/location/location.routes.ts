@@ -14,6 +14,7 @@ router.get('/:id', LocationController.getSingleLocation);
 router.get('/', LocationController.getAllLocations);
 
 router.delete('/:id', LocationController.deleteLocation);
+router.patch('/:id', LocationController.updateLocation);
 
 
 export const LocationRoute = router;
