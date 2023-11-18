@@ -1,12 +1,12 @@
-import { Request, Response } from "express";
-import catchAsync from "../../../shared/catchAsync";
-import { LocationService } from "./location.service";
-import sendResponse from "../../../shared/sendResponse";
-import httpStatus from "http-status";
-import { ILocation } from "./location.interface";
-import pick from "../../../shared/pick";
-import { locationFilterableFields } from "./location.constants";
-import { paginationFields } from "../../../constants/paginationConstants";
+import { Request, Response } from 'express';
+import catchAsync from '../../../shared/catchAsync';
+import { LocationService } from './location.service';
+import sendResponse from '../../../shared/sendResponse';
+import httpStatus from 'http-status';
+import { ILocation } from './location.interface';
+import pick from '../../../shared/pick';
+import { locationFilterableFields } from './location.constants';
+import { paginationFields } from '../../../constants/paginationConstants';
 
 const createLocation = catchAsync(async (req: Request, res: Response) => {
   const result = await LocationService.createLocation(req.body);
@@ -49,6 +49,7 @@ const getSingleLocation = catchAsync(async (req: Request, res: Response) => {
   });
 });
 
+// ! update location start
 const updateLocation = catchAsync(async (req: Request, res: Response) => {
   const id = req.params.id;
   const updatedData = req.body;
@@ -59,8 +60,10 @@ const updateLocation = catchAsync(async (req: Request, res: Response) => {
     success: true,
     message: 'Location updated successfully',
     data: result,
-  });
+  }); 
 });
+
+// ! update location End
 
 const deleteLocation = catchAsync(async (req: Request, res: Response) => {
   const id = req.params.id;
@@ -82,4 +85,3 @@ export const LocationController = {
   deleteLocation,
   updateLocation,
 };
-
