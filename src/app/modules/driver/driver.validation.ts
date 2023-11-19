@@ -20,7 +20,7 @@ const VehicleSchema = z.object({
       required_error: 'Model name is required',
     })
     .min(1),
-  year: z.number({ required_error: 'Manufactured year is required' }),
+  year: z.string({ required_error: 'Manufactured year is required' }),
   plateNumber: z.string({
     required_error: 'Plate number is required',
   }),
@@ -63,6 +63,16 @@ const updateDriverZodSchema = z.object({
     address: z
       .string({
         required_error: 'Address is required',
+      })
+      .optional(),
+    nid: z
+      .string({
+        required_error: 'NID is required',
+      })
+      .optional(),
+    licenseNumber: z
+      .string({
+        required_error: 'Driving License number is required',
       })
       .optional(),
     vehicle: VehicleSchema.optional(),
