@@ -15,7 +15,7 @@ export type IDriver = {
   password: string;
   role: UserRole;
   phoneNumber: string;
-  nid: number;
+  nid: string;
   licenseNumber: string;
   address: string;
   vehicle: IVehicle;

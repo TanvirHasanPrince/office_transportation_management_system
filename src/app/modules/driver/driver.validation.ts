@@ -40,10 +40,15 @@ const createDriverZodSchema = z.object({
     address: z.string({
       required_error: 'Address is required',
     }),
+    nid: z.string({
+      required_error: 'NID is required',
+    }),
+    licenseNumber: z.string({
+      required_error: 'Driving License number is required',
+    }),
     vehicle: VehicleSchema,
   }),
 });
-
 
 const updateDriverZodSchema = z.object({
   body: z.object({
@@ -63,7 +68,6 @@ const updateDriverZodSchema = z.object({
     vehicle: VehicleSchema.optional(),
   }),
 });
-
 
 export const DriverValidation = {
   createDriverZodSchema,

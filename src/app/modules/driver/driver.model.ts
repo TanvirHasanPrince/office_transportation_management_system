@@ -48,6 +48,14 @@ const DriverSchema = new Schema<IDriver, DriverModel>(
       type: String,
       required: true,
     },
+    nid: {
+      type: String,
+      required: true,
+    },
+    licenseNumber: {
+      type: String,
+      required: true,
+    },
     vehicle: vehicleSchema,
   },
 
