@@ -7,8 +7,35 @@ import { IGenericResponse } from '../../../interfaces/common';
 import { adminSearchableFields } from './admin.constants';
 import { paginationHelpers } from '../../../helpers/paginationHelper';
 import { SortOrder } from 'mongoose';
+import { Employee } from '../employee/employee.model';
+import { Driver } from '../driver/driver.model';
 
 const createAdmin = async (admin: IAdmin): Promise<IAdmin> => {
+  const { phoneNumber } = admin;
+
+  let foundUser = null;
+
+  const adminResult = await Admin.findOne({ phoneNumber: phoneNumber });
+  const employeeResult = await Employee.findOne({
+    phoneNumber: phoneNumber,
+  });
+  const driverResult = await Driver.findOne({ phoneNumber: phoneNumber });
+
+  if (adminResult) {
+    foundUser = adminResult;
+  } else if (employeeResult) {
+    foundUser = employeeResult;
+  } else if (driverResult) {
+    foundUser = driverResult;
+  }
+
+  if (foundUser) {
+    throw new ApiError(
+      httpStatus.BAD_REQUEST,
+      'This phone number has already been used to register user',
+    );
+  }
+
   const createdAdmin = await Admin.create(admin);
 
   if (!createdAdmin) {
@@ -79,7 +106,6 @@ const getSingleAdmin = async (id: string): Promise<IAdmin | null> => {
   return result;
 };
 
-
 const updateAdmin = async (
   id: string,
   payload: Partial<IAdmin>,
@@ -107,7 +133,6 @@ const updateAdmin = async (
   });
   return result;
 };
-
 
 const deleteAdmin = async (id: string): Promise<IAdmin | null> => {
   const result = await Admin.findByIdAndDelete(id);
