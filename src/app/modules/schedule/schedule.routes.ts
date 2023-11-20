@@ -10,5 +10,7 @@ router.post(
   ScheduleController.createSchedule,
 );
 
+router.delete('/:id', ScheduleController.deleteSchedule);
+
 
 export const ScheduleRoute = router;

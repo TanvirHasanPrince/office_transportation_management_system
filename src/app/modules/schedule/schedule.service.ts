@@ -95,7 +95,19 @@ const getAllSchedules = async (
 };
 
 
+
+const deleteSchedule = async (id: string): Promise<ISchedule | null> => {
+  const result = await Schedule.findByIdAndDelete(id);
+  return result;
+};
+
+
+
+
+
+
 export const ScheduleService = {
   createSchedule,
   getAllSchedules,
+  deleteSchedule,
 };
