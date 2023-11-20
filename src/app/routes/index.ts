@@ -5,6 +5,7 @@ import { DriverRoute } from '../modules/driver/driver.routes';
 import { LocationRoute } from '../modules/location/location.routes';
 import { ScheduleRoute } from '../modules/schedule/schedule.routes';
 import { authRoutes } from '../modules/auth/auth.routes';
+import { profileRoutes } from '../modules/profile/profile.routes';
 
 const router = express.Router();
 
@@ -32,6 +33,10 @@ const moduleRoutes = [
   {
     path: '/auth',
     route: authRoutes,
+  },
+  {
+    path: '/profile',
+    route: profileRoutes,
   },
 ];
 
