@@ -6,21 +6,6 @@
     "auditLog": "D:\\My Projects\\Office Transportation Management System\\office_transportation_management_system_backend\\logs\\winston\\success\\.43e49f105eeb7f5e90356cde9e0269cf553d3570-audit.json",
     "files": [
         {
-            "date": 1699255064340,
-            "name": "D:\\My Projects\\Office Transportation Management System\\office_transportation_management_system_backend\\logs\\winston\\success\\GM-2023-11-06-13-success.log",
-            "hash": "58a30997188df6dacbea015bcecc6105908d4069f7ea33c38e6743cb1b7f3c86"
-        },
-        {
-            "date": 1699264246965,
-            "name": "D:\\My Projects\\Office Transportation Management System\\office_transportation_management_system_backend\\logs\\winston\\success\\GM-2023-11-06-15-success.log",
-            "hash": "96679d7d53f8e5d59ca58c5881ae8fcc6385b3579a48455a5cbd57fbfc6ac7ee"
-        },
-        {
-            "date": 1699266597714,
-            "name": "D:\\My Projects\\Office Transportation Management System\\office_transportation_management_system_backend\\logs\\winston\\success\\GM-2023-11-06-16-success.log",
-            "hash": "76c6aa75f7905d59832458b2faff466d6adbb4648c682fae217bf6a25b3b9d63"
-        },
-        {
             "date": 1699437234035,
             "name": "D:\\My Projects\\Office Transportation Management System\\office_transportation_management_system_backend\\logs\\winston\\success\\GM-2023-11-08-15-success.log",
             "hash": "12e8bbfbac77193eca9d29ae21df4b034b4d0f3a35bfaca03a6f3a6be87ff5a8"
@@ -124,6 +109,11 @@
             "date": 1700463799937,
             "name": "D:\\My Projects\\Office Transportation Management System\\office_transportation_management_system_backend\\logs\\winston\\success\\GM-2023-11-20-13-success.log",
             "hash": "02620a81375d8c6cd6d25ef6fe4db5e357bc03a2feea666ee2ce098767bfccd5"
+        },
+        {
+            "date": 1700557978035,
+            "name": "D:\\My Projects\\Office Transportation Management System\\office_transportation_management_system_backend\\logs\\winston\\success\\GM-2023-11-21-15-success.log",
+            "hash": "2885d68e6f7a1342bd99ac6ead8682e538516c52d3b729b8c0bfb01a9a9a6465"
         }
     ],
     "hashType": "sha256"
