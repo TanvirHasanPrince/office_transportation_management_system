@@ -8,7 +8,7 @@ import bcrypt from 'bcrypt';
 const vehicleSchema = new Schema({
   brand: String,
   model: String,
-  year: Number,
+  year: String,
   plateNumber: String,
   color: String,
 });

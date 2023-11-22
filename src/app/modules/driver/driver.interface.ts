@@ -5,7 +5,7 @@ import { Model } from 'mongoose';
 export type IVehicle = {
   brand: string;
   model: string;
-  year: number;
+  year: string;
   plateNumber: string;
   color: string;
 };
