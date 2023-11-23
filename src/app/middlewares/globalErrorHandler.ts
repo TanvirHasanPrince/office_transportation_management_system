@@ -4,7 +4,7 @@ import { IGenericErrorMessage } from '../../interfaces/error';
 import handleValidationError from '../../errors/handleValidationError';
 import ApiError from '../../errors/ApiError';
 import config from '../../config';
-// import { errorlogger } from '../../shared/logger';
+import { errorlogger } from '../../shared/logger';
 import { ZodError } from 'zod';
 import handleZodErrorHandler from '../../errors/handleZodError';
 import handleCastError from '../../errors/handleCastError';
@@ -19,7 +19,7 @@ const globalErrorHandler: ErrorRequestHandler = (
   // eslint-disable-next-line no-unused-expressions
   config.env === 'development'
     ? console.log('globalErrorHandler ~', error)
-    : console.error('globalErrorHandler', error);
+    : errorlogger.error('globalErrorHandler', error);
 
   let statusCode = 500;
   let message = 'Something went wrong !';
