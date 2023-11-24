@@ -6,16 +6,6 @@
     "auditLog": "D:\\My Projects\\Office Transportation Management System\\office_transportation_management_system_backend\\logs\\winston\\success\\.43e49f105eeb7f5e90356cde9e0269cf553d3570-audit.json",
     "files": [
         {
-            "date": 1699437234035,
-            "name": "D:\\My Projects\\Office Transportation Management System\\office_transportation_management_system_backend\\logs\\winston\\success\\GM-2023-11-08-15-success.log",
-            "hash": "12e8bbfbac77193eca9d29ae21df4b034b4d0f3a35bfaca03a6f3a6be87ff5a8"
-        },
-        {
-            "date": 1699437966811,
-            "name": "D:\\My Projects\\Office Transportation Management System\\office_transportation_management_system_backend\\logs\\winston\\success\\GM-2023-11-08-16-success.log",
-            "hash": "87881b90ba222c21d34348968a184f5e655ef9012b1dfc19224c7178027d9f37"
-        },
-        {
             "date": 1699803321901,
             "name": "D:\\My Projects\\Office Transportation Management System\\office_transportation_management_system_backend\\logs\\winston\\success\\GM-2023-11-12-21-success.log",
             "hash": "1663f54bbbe297c0d618406b6c99afcb865a828563436dbfb6f2e89a6e402705"
@@ -114,6 +104,11 @@
             "date": 1700557978035,
             "name": "D:\\My Projects\\Office Transportation Management System\\office_transportation_management_system_backend\\logs\\winston\\success\\GM-2023-11-21-15-success.log",
             "hash": "2885d68e6f7a1342bd99ac6ead8682e538516c52d3b729b8c0bfb01a9a9a6465"
+        },
+        {
+            "date": 1700763646186,
+            "name": "D:\\My Projects\\Office Transportation Management System\\office_transportation_management_system_backend\\logs\\winston\\success\\GM-2023-11-24-00-success.log",
+            "hash": "2c5b1031236823922d275d5cec0281412b7702117db3aebbf28da954e12662b5"
         }
     ],
     "hashType": "sha256"
